@@ -1,6 +1,7 @@
 package com.bookStore.entity;
 
-import jakarta.persistence.Column;
+//import jakarta.persistence.Column;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -9,11 +10,15 @@ import jakarta.persistence.Table;
 @Table(name="MyBooks")
 public class MyBookList {
 	@Id
-	@Column(name="book_id")
+//	@Column(name="book_id")
 private int id;
 private String name;
 private String author;
 private String price;
+public MyBookList() {
+	super();
+	// TODO Auto-generated constructor stub
+}
 public MyBookList(int id, String name, String author, String price) {
 	super();
 	this.id = id;
@@ -21,10 +26,7 @@ public MyBookList(int id, String name, String author, String price) {
 	this.author = author;
 	this.price = price;
 }
-public MyBookList() {
-	super();
-	// TODO Auto-generated constructor stub
-}
+
 public int getId() {
 	return id;
 }
